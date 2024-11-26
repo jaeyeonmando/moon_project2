@@ -8,11 +8,13 @@ body {
 * {
   margin:0;
   padding:0;
-  box-sizing: border-box;
+  box-sizing: border-box; 
 }
+
 a {
-  text-decoration:none;
+  text-decoration:none; 
 }
+
 ul {
   list-style: none;
 }
@@ -22,9 +24,9 @@ ul {
   width:1200px;
 }
 
-/*********************************/
-/* 헤더 영역 - 로고와 내비게이션 */
-/*********************************/
+
+/***** 헤더 *****/
+
 
 header{
   width:100%;
@@ -39,6 +41,7 @@ header{
   line-height:110px;
   padding-left:20px;
 }
+
 #logo h1 {
   font-family: "Bokor",  cursive;
   font-weight:700;
@@ -47,157 +50,171 @@ header{
   text-shadow:10px 10px 10px #000000;
 }
 
-/* 내비게이션 */
 nav{  
   font-family: "Lexend", sans-serif;
-  float:right;   /* 오른쪽으로 플로팅 */
-  width:800px;   /*   너비 */  
-  height:100px;   /* 메뉴 영역 높이 */  
-  padding-top:40px;  /* 메뉴를 아래로 내리기 위해 */  
+  float:right;
+  width:800px;
+  height:100px;
+  padding-top:40px;
 }
+
 #topMenu {  
   height:60px; 
 }
+
 #topMenu > li {
-  float:left;  /* 메뉴 항목을 왼쪽으로 플로팅 */ 
-  position: relative;  /* 서브 메뉴를 absolute로 하기 위해, 이 부분을 relative로 */  
+  float:left;
+  position: relative;
 }
+
 #topMenu > li > a{
-  display:block;  /* 링크 텍스트는 블록으로 */ 
-  color:#fff;  /* 글자 색 */
-  font-weight:600;  /* 글자 굵기 */
-  padding:25px 65px;  /* 패딩 */ 
+  display:block;
+  color:#fff;
+  font-weight:600;
+  padding:25px 65px;
 }
+
 #topMenu > li > a > span {
-  font-size : 0.5em;   /* 서브 메뉴가 있는 항목에 화살표 표시 */   
+  font-size : 0.5em; 
 }
+
 #topMenu > li > a:hover {
-  color:#8a1ac6;  /* 마우스 오버하면 색상 바뀜 */ 
-  text-shadow:0 -1px rgb(142, 59, 162);  /* 글자가 너무 굵어지지 않도록 */
+  color:#8a1ac6;
+  text-shadow:0 -1px rgb(142, 59, 162);
 }
-#topMenu > li > ul { /* 서브 메뉴 스타일 */
-  display: none;  /* 서브 메뉴 처음에는 화면에 안 보이게 */ 
-  position:absolute;  /* 서브 메뉴 포지셔닝 */ 
+
+#topMenu > li > ul {
+  display: none;
+  position:absolute;
   width:160px;
-  background:rgba(220, 184, 242, 0.6);  /* 슬라이드 쇼 비치도록 배경 색 조절 */
+  background:rgba(220, 184, 242, 0.6);
   left:20px;     
   margin:0;
 }
+
 #topMenu > li > ul > li {    
-  padding:10px 10px 10px 30px;   /* 서브 메뉴 항목 */
+  padding:10px 10px 10px 30px;
 }
+
 #topMenu > li > ul > li > a { 
   font-size:14px;   
   padding:10px;
   color:#000;  
 }
+
 #topMenu > li:hover > ul {
-  display: block;  /* 메인 메뉴 항목 위로 오버하면 서브 메뉴 표시 */
-  z-index:10;  /* 슬라이드 쇼에 가리지 않게 조절 */ 
+  display: block;
+  z-index:10;
 }
+
 #topMenu > li > ul > li > a:hover {
-  color:rgb(232, 22, 225);  /* 서브 메뉴 마우스 오버하면 색상 바뀜 */   
+  color:rgb(232, 22, 225);   
 } 
 
 
-
-/********************************/
-/*   이미지 슬라이드 쇼 영역    */
-/********************************/
+/***** 이미지 슬라이드 쇼 *****/
 
 #slideShow {   
-  clear:both;   /* 플로팅 해제 */
-  width:100%;    /* 너비 */ 
-  height:700px;   /* 높이 */ 
-  overflow:hidden;   /* 영역 넘치면 감춤 */ 
+  clear:both;
+  width:100%; 
+  height:700px;
+  overflow:hidden;
   position: relative;
 }
+
 #slides {
   position: absolute;
 }
+
 #slides > img {
-  width:100%;  /* 너비 */
-  float:left;  /* 가로로 배치 */
+  width:100%;
+  float:left;
 }
 
 button{
   position: absolute;
-  height:100%;  /* 위아래 가득 차게 */ 
+  height:100%;
   top:0;
-  border:none;  /* 테두리 없이 */  
+  border:none; 
   padding:20px;
-  background-color: transparent;  /* 투명 배경 */ 
-  color:#000;  /* 화살표 색은 검정 */  
-  font-weight:800;  /* 굵게 */ 
-  font-size: 24px;  /* 화살표 크기 */ 
-  opacity: 0.5;  /* 반투명 */ 
+  background-color: transparent;
+  color:#000;
+  font-weight:800;
+  font-size: 24px;
+  opacity: 0.5;
 }
+
 #prev {
-  left:0;  /* 왼쪽으로 붙여서 */ 
+  left:0;
 }
+
 #next {
-  right:0;  /* 오른쪽으로 붙여서 */ 
+  right:0;
 }
+
 button:hover {
-  background-color:#222;  /* 짙은 회색 배경 */
-  color:#8a1ac6;   /* 흰색 화살표 */ 
-  opacity:0.6;   /* 불투명도를 조금 높임 */ 
-  cursor:pointer;  /* 커서 모양을 포인터로 */ 
+  background-color:#222;
+  color:#8a1ac6;
+  opacity:0.6; 
+  cursor:pointer;
 }
+
 button:focus {
-  outline:0;  /* 아웃트라인 없앰 */
+  outline:0;
 }
 
 
-/**************************************/
-/*   콘텐츠 영역  - 탭 메뉴와 퀵 링크 */
-/**************************************/
+/***** 콘텐츠  *****/
 
 #contents{  
-  width:100%;   /* 너비 */
-  height:400px;  /* 높이 */   
-  margin-top:0px;  /* 마진 추가 */
+  width:100%;
+  height:400px;
+  margin-top:0px;
   color:#f5f5f5;    
 }
 
-/* 탭 메뉴 */
 #tabMenu{  
   font-family: "Lexend", sans-serif;
-  float:left;  /* 왼쪽으로 플로팅 */ 
-  width:600px;   /* 너비 */ 
-  height:100%;   /* 높이 */
-  margin-top:10px;  /* 탭 메뉴 위쪽에 여백 두기 */
-  padding:0px;  /* 패딩 */
+  float:left;
+  width:600px;
+  height:100%;
+  margin-top:10px;
+  padding:0px;
 }
+
 #tabMenu  input[type="radio"] {
-  display:none;  /* 라디오 버튼 감춤 */ 
+  display:none;
 }
-#tabMenu label {  /* 탭 제목 스타일 */ 
-  display:inline-block;  /* 탭들을 가로로 배치 */
-  margin:0 0;  /* 마진 */ 
-  padding:15px 25px;  /* 패딩 */
-  font-weight:600;   /* 글자 굵기 */
-  text-align: center;   /* 글자 정렬 */
-  color:#aaa;  /* 글자 색 */ 
-  border:1px solid transparent;  /* 테두리 */ 
+
+#tabMenu label {
+  display:inline-block;
+  margin:0 0;
+  padding:15px 25px;
+  font-weight:600;
+  text-align: center;
+  color:#aaa;
+  border:1px solid transparent;
 }
-#tabMenu label:hover {  /* 마우스 오버했을 때 탭 제목 스타일 */
+
+#tabMenu label:hover {
   color:#8a1ac6;  
   cursor:pointer;
 }
-#tabMenu input:checked + label {  /* 활성화된 탭 제목 스타일 */ 
+
+#tabMenu input:checked + label {
   color:#c58be4a0;
   border:2px solid #c58be494;;
   background-color: #000000;
 }
 
-.tabContent {  /* 탭 내용 스타일 */
+.tabContent { 
   display:none;
   padding:0 0 0;
   border-top:2px solid #818181;
   color:#9c9c9ca0;
-  padding:20px 20px 20px;  /* 패딩 */
+  padding:20px;
 }
+
 .tabContent h2{  
   display:none; 
 }
@@ -206,27 +223,28 @@ button:focus {
   list-style: disc;
   margin-left:30px;
 }
+
 #notice ul li {
   font-size:16px;
   line-height:2.5;
 }
+
 #gallery ul li {
-  display: inline;  /* 이미지 가로로 배치 */
-  margin-right: 0px; /* 이미지 간 간격 */
+  display: inline;
+  margin-right: 0px;
 }
 
 #gallery ul li img {
-  width: 180px;  /* 이미지 너비 */
-  height: 144px;  /* 비율에 맞춰 높이 자동 조정 */
-  opacity: 0.5;   /* 기본 불투명도 낮추기 */
-  transition: opacity 0.3s ease, transform 0.3s ease; /* 부드러운 전환 효과 */
+  width: 180px;
+  height: 144px;
+  opacity: 0.5;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 #gallery ul li img:hover {
-  opacity: 1;  /* 마우스를 올리면 불투명도 원본으로 복원 */
-  transform: scale(1.1);  /* 이미지 크기 살짝 확대 */
+  opacity: 1;
+  transform: scale(1.1);
 }
-
 
 #tab1:checked ~ #notice, 
 #tab2:checked ~ #gallery {
@@ -235,142 +253,145 @@ button:focus {
 
 #links {
   background-color: #4e0245ac;
-  float: right;  /* 오른쪽으로 플로팅 */
-  width: 600px;  /* 너비 */
-  height: 359px; /* 높이 */
-  margin-top: 20px; /* 마진 추가 */
-  position: relative;  /* 버튼을 절대 위치로 설정할 수 있게 */
-  overflow: hidden;  /* 영역 넘치면 감춤 */
+  float: right;
+  width: 600px;
+  height: 359px;
+  margin-top: 20px;
+  position: relative;
+  overflow: hidden;
 }
 
 #links ul {
-  padding: 0; /* 패딩 */
-  overflow: hidden; /* 넘치는 것은 감춤 */
+  padding: 0;
+  overflow: hidden;
   position: absolute;
   width: 100%;
   height: 100%;
 }
 
 #links ul li {
-  float: left;  /* 가로로 배치 */
-  width: 33%;  /* 1/3 크기만큼씩 */
-  text-align: center;  /* 가운데 정렬 */
-  margin: 10px 0;  /* 마진 */
+  float: left;
+  width: 33%;
+  text-align: center;
+  margin: 10px 0;
 }
 
 #links ul li a span {
-  display: block;  /* 블록 레벨로 */
-  margin: 0 auto;  /* 가운데 배치 */
-  width: 150px;  /* 가로 크기 */
-  height: 150px;  /* 세로 크기 */
-  border-radius: 100%;  /* 테두리 둥글게 */
-  border: 1px solid #ddd;  /* 테두리 스타일 */
-  line-height: 150px;  /* 수직으로 중간에 오게 */
+  display: block;
+  margin: 0 auto;
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  border: 1px solid #ddd;
+  line-height: 150px;
 }
 
-/* 슬라이드 부분 */
 #prev, #next {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);  /* 버튼을 세로로 가운데 정렬 */
-  height: 50px;  /* 버튼 높이 */
-  width: 50px;  /* 버튼 너비 */
-  border: none;  /* 테두리 없이 */
-  background-color: transparent;  /* 투명 배경 */
-  color: #000;  /* 화살표 색 */
-  font-weight: 800;  /* 굵게 */
-  font-size: 30px;  /* 화살표 크기 */
-  opacity: 0.5;  /* 반투명 */
+  transform: translateY(-50%);
+  height: 50px;
+  width: 50px;
+  border: none;
+  background-color: transparent;
+  color: #000;
+  font-weight: 800;
+  font-size: 30px;
+  opacity: 0.5;
   cursor: pointer;
 }
 
 #prev {
-  left: 0;  /* 왼쪽으로 붙여서 */
+  left: 0;
 }
 
 #next {
-  right: 0;  /* 오른쪽으로 붙여서 */
+  right: 0;
 }
 
 #prev:hover, #next:hover {
-  background-color: #222;  /* 짙은 회색 배경 */
-  color: #8a1ac6;  /* 흰색 화살표 */
-  opacity: 0.6;  /* 불투명도를 조금 높임 */
+  background-color: #222;
+  color: #8a1ac6;
+  opacity: 0.6;
 }
 
 #prev:focus, #next:focus {
-  outline: 0;  /* 아웃라인 없앰 */
+  outline: 0;
 }
 
 .icon {
-  width: 145px;              /* 원하는 너비 설정 */
-  height: 150px;             /* 원하는 높이 설정 */
-  object-fit: cover;         /* 이미지가 원형 영역에 맞게 채워지도록 설정 */
-  object-position: center;   /* 이미지를 중앙에 배치 */
-  border-radius: 50%;        /* 이미지를 원형으로 만들기 */
+  width: 145px;
+  height: 150px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
   opacity: 0.9;
 }
 
 #links ul li a p {
-  margin-top: 15px;       /* 위쪽 마진 */
-  font-weight: 300;       /* 글자 굵기 */
-  color: #616161;         /* 글자 색 (예시: 핑크색) */
-  font-size: 14px;        /* 글자 크기 */
-  line-height: 1.4;       /* 줄 간격 */
-  padding-left: 10px;     /* 왼쪽 여백 */
-  padding-right: 10px;    /* 오른쪽 여백 */
+  margin-top: 15px;
+  font-weight: 300;
+  color: #616161;
+  font-size: 14px;
+  line-height: 1.4;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
-/******************/
-/*   푸터 영역    */
-/******************/
+
+/***** 푸터 *****/
 
 footer{   
-  width:100%;   /* 너비 */
-  height:100px;  /* 높이 */
+  width:100%;
+  height:100px;
   border-top:2px solid #222;
 }
+
 #bottomMenu{
   width:100%;
   height:50px;
   position:relative;  
-  background: linear-gradient(to right, #80001596, #804000a1, #807500a0, #44800090, #00646785, #00377f97, #4c0082a4, #82007197); /* 어두운 무지개 */
-  clear: both; /* float 해제 */
+  background: linear-gradient(to right, #80001596, #804000a1, #807500a0, #44800090, #00646785, #00377f97, #4c0082a4, #82007197);
 }
-
 
 #bottomMenu ul {
   margin-top:15px;  
 }
+
 #bottomMenu ul li{
-  float:left;  /* 가로로 배치 */ 
+  float:left;
   padding:15px 20px;
-  border-right:1px solid #ddd;   /* 항목 오른쪽에 테두리 */ 
+  border-right:1px solid #ddd;
 }
+
 #bottomMenu ul li:last-child{
-  border:none;  /* 마지막 항목에는 오른쪽 테두리 없음 */  
+  border:none;  
 }
+
 #bottomMenu ul li a, #bottomMenu ul li a:visited {  
   font-family: "Lexend", sans-serif;
-  font-size:15px;  /* 글자 크기 */ 
-  color:#aaa;  /* 글자 색 */ 
+  font-size:15px;
+  color:#aaa;
 }
+
 #sns {
   position:absolute;  
-  right:0;  /* 오른쪽 끝에 배치 */ 
+  right:0;
 }
+
 #sns ul li{
-  border:none;  /* 테두리 없이 */
+  border:none;
   padding:5px;   
 } 
+
 #company{
-  clear:left;  /* 플로팅 해제. clear:both도 가능 */
-  margin-top:25px;  /* 위쪽 마진 */
-  margin-left:20px;  /* 왼쪽 마진 */ 
+  clear:left;
+  margin-top:25px;
+  margin-left:20px;
 }
 
 p {
   font-family: "Lexend", sans-serif;
-  font-size:14px;  /* 글자 크기 */
-  color:#686868;    /* 글자 색*/ 
+  font-size:14px;
+  color:#686868;
 }
